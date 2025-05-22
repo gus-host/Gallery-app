@@ -222,17 +222,6 @@ Gallery App is a full-stack Next.js application for discovering, saving, organiz
 ![Demo GIF](assets/demo.gif)  
 [Watch video walkthrough](https://your-video-link)
 
----
-
-## 📋 Submission Requirements
-
-- **README** (≤500 words) with demo  
-- **Source Files** (buildable)  
-- **License**: MIT  
-- **Contact**: Discord / X handles below
-
----
-
 ## 📄 License
 
 This project is licensed under the [MIT License](LICENSE).

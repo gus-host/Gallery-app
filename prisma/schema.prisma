@@ -1,0 +1,78 @@
+generator client {
+  provider = "prisma-client-js"
+}
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id             String       @id @default(cuid())
+  name           String?
+  email          String       @unique
+  image          String?
+  emailVerified  DateTime?
+  accounts       Account[]
+  sessions       Session[]
+  favorites      Favorite[]   // your saved images
+  collections    Collection[] // new collections
+
+  @@map("user")
+}
+
+model Favorite {
+  id          String        @id @default(cuid())
+  userId      String
+  imageId     String
+  imageUrl    String
+  description String
+  createdAt   DateTime      @default(now())
+
+  user        User          @relation(fields: [userId], references: [id])
+  collections Collection[]  // now a back-relation
+
+  @@map("favorite")
+}
+
+model Collection {
+  id        String      @id @default(cuid())
+  name      String      // e.g. “Summer Trip 2025”
+  slug      String      @unique  // for shareable URLs
+  userId    String
+  user      User        @relation(fields: [userId], references: [id])
+  createdAt DateTime    @default(now())
+
+  // connect collections directly to your Favorite items
+  favorites Favorite[]  
+
+  @@map("collection")
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  user         User     @relation(fields: [userId], references: [id])
+  expires      DateTime
+
+  @@map("session")
+}
+
+model Account {
+  id                  String   @id @default(cuid())
+  userId              String
+  provider            String
+  providerAccountId   String
+  type                String
+  access_token        String?
+  expires_at          Int?
+  refresh_token       String?
+  scope               String?
+  token_type          String?
+  id_token            String?
+  session_state       String?
+  user                User     @relation(fields: [userId], references: [id])
+
+  @@unique([provider, providerAccountId])
+  @@map("account")
+}

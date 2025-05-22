@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import LoginButton from "@/components/LoginButton";
 import { ArrowPathIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
+import Logo from "../../components/icons/Logo";
 
 export default function LoginPage() {
   const { status } = useSession();
@@ -37,7 +38,7 @@ export default function LoginPage() {
       </div>
       <div className="w-full md:w-2/5 flex flex-col justify-center items-center bg-gray-100 p-8 min-h-screen">
         <div className="bg-white rounded-md shadow-lg p-8 w-80 h-70 flex flex-col items-center gap-6">
-          <Image src="/logo.svg" alt="AstraPic Logo" width={150} height={150} />
+          <Logo />
           <h2 className="text-xl font-bold text-gray-700">Welcome back</h2>
           <LoginButton />
         </div>

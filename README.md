@@ -82,20 +82,20 @@ Gallery App is a full-stack Next.js application for discovering, saving, organiz
 - **Unsplash API Integration**  
   - Fetch high-resolution images, photographer name, links, and metadata  
   - Rate-limit handling and error fallback  
-- **Live Autocomplete**  
-  - Debounced input to minimize API calls  
-  - Typeahead suggestions showing keywords or photographer names  
 - **Advanced Filters**  
+  - filter by most recent and most likes 
   - Orientation (landscape/portrait/square)  
-  - Color palette filters (e.g. vibrant, muted, monochrome)  
-  - Content safety “safe search” toggle  
-- **Pagination & Infinite Scroll**  
-  - Load more results as the user scrolls  
-  - “Load more” button fallback on mobile  
-- **Image Details Modal**  
-  - Lightbox view with full-screen preview  
-  - Download link, photographer credit, and EXIF data (where available)  
+- **Pagination**
+  - Default search for "perros"
+  - returning 15 images per page
+  - Next page button to get mote search results
+  - Previous page button to get previous images
+ 
+  Watch video:
 
+[![Demo Video](https://upww.screenrec.com/images/f_T3bqUFw6gONx8flzG1mkJBSXnWZ5A02E.png)](https://screenrec.com/share/y3C4DuS5eQ){:target="_blank" rel="noopener"}  
+*Click to play demo 
+  
 ---
 
 ### 🔒 Secure Sign-In
@@ -104,16 +104,13 @@ Gallery App is a full-stack Next.js application for discovering, saving, organiz
   - Automatic session management with JWTs or database sessions  
 - **Session Persistence**  
   - HTTP-only, Secure cookies to prevent XSS/CSRF  
-  - “Remember me” option for long-lived sessions  
-- **Role-based Access**  
-  - Admin vs. User roles (future extensibility)  
-  - Middleware guards on API routes and pages  
-- **Account Linking**  
-  - Support for multiple OAuth providers (e.g. GitHub, Facebook)  
-  - Link/unlink in user settings  
-- **User Profile Page**  
-  - View and edit display name, avatar  
-  - View usage stats: number of favorites and collections  
+  - “Remember me” option for long-lived sessions
+- **Access to extra features**  
+  - Ability to make favourites images
+  - Favorite images are make by clicking the heart icon on the image
+  - Heart icon will not be seen when user is not authenticated
+  - Ability to access collections
+  - Logout button to logout the account  
 
 ---
 
@@ -175,6 +172,25 @@ Gallery App is a full-stack Next.js application for discovering, saving, organiz
   - Verified on Chrome, Safari, Firefox, Edge, and mobile WebViews  
 
 
+---
+
+## ✨ Future Features (in development)
+- **Live Autocomplete**  
+  - Debounced input to minimize API calls  
+  - Typeahead suggestions showing keywords or photographer names
+- **Image Details Modal**  
+  - Lightbox view with full-screen preview  
+  - Download link, photographer credit, and EXIF data (where available)
+- **Role-based Access**  
+  - Admin vs. User roles (future extensibility)  
+  - Middleware guards on API routes and pages
+- **Account Linking**  
+  - Support for multiple OAuth providers (e.g. GitHub, Facebook)  
+  - Link/unlink in user settings  
+- **User Profile Page**  
+  - View and edit display name, avatar  
+  - View usage stats: number of favorites and collections
+    
 ---
 
 ## 🚀 Getting Started

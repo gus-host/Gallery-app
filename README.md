@@ -93,7 +93,7 @@ Gallery App is a full-stack Next.js application for discovering, saving, organiz
  
   Watch video:
 
-[![Demo Video](https://upww.screenrec.com/images/f_T3bqUFw6gONx8flzG1mkJBSXnWZ5A02E.png)](https://screenrec.com/share/y3C4DuS5eQ){:target="_blank" rel="noopener"}  
+[![Demo Video](https://upww.screenrec.com/images/f_T3bqUFw6gONx8flzG1mkJBSXnWZ5A02E.png)](https://screenrec.com/share/y3C4DuS5eQ)  
 *Click to play demo 
   
 ---
@@ -110,7 +110,10 @@ Gallery App is a full-stack Next.js application for discovering, saving, organiz
   - Favorite images are make by clicking the heart icon on the image
   - Heart icon will not be seen when user is not authenticated
   - Ability to access collections
-  - Logout button to logout the account  
+  - Logout button to logout the account
+ 
+[![Demo Video](https://upww.screenrec.com/images/f_eR3B16OMu0xPrg9dEHKimDbZFjXNfs2Y.png)](https://screenrec.com/share/kMPXH2r89l)  
+*Click to play demo
 
 ---
 
@@ -131,9 +134,11 @@ Gallery App is a full-stack Next.js application for discovering, saving, organiz
   - Prisma schema linking `Collection` ↔ `Favorite`  
   - Efficient joins and counts (`_count`) for fast listing  
 - **Bulk Actions**  
-  - Select multiple favorites to add/remove from a collection at once  
-  - Export collection metadata as JSON or CSV  
+  - Select multiple favorites to add from a collection at once
+  
 
+  [![Demo Video](https://upww.screenrec.com/images/f_eR3B16OMu0xPrg9dEHKimDbZFjXNfs2Y.png)](https://screenrec.com/share/kMPXH2r89l)  
+*Click to play demo
 ---
 
 ### 🔗 Shareable Albums
@@ -142,10 +147,7 @@ Gallery App is a full-stack Next.js application for discovering, saving, organiz
   - Validation to prevent collisions  
 - **Public Viewing**  
   - `/collections/share/[slug]` serves a Server Component without auth  
-  - Read-only gallery display with captions  
-- **Expiration & Permissions**  
-  - Optional expiration date on shared links (not completed)
-  - Protected shares with secret token (future feature)  
+  - Read-only gallery display with captions   
 - **Social Sharing Buttons**  
   - One-click share to Twitter, Facebook, WhatsApp (future feature)  
   - “Copy link” button with clipboard feedback  
@@ -190,6 +192,9 @@ Gallery App is a full-stack Next.js application for discovering, saving, organiz
 - **User Profile Page**  
   - View and edit display name, avatar  
   - View usage stats: number of favorites and collections
+- **Expiration & Permissions**  
+  - Optional expiration date on shared links (not completed)
+  - Protected shares with secret token (future feature) 
     
 ---
 

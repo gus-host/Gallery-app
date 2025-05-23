@@ -137,7 +137,7 @@ Gallery App is a full-stack Next.js application for discovering, saving, organiz
   - Select multiple favorites to add from a collection at once
   
 
-  [![Demo Video](https://upww.screenrec.com/images/f_eR3B16OMu0xPrg9dEHKimDbZFjXNfs2Y.png)](https://screenrec.com/share/kMPXH2r89l)  
+  [![Demo Video](https://upww.screenrec.com/images/f_9BYLbtiUAsjezrC0OpDukxwqQ14oWlKN.png)](https://screenrec.com/share/Y6MRzidmlQ)  
 *Click to play demo
 ---
 
@@ -148,12 +148,11 @@ Gallery App is a full-stack Next.js application for discovering, saving, organiz
 - **Public Viewing**  
   - `/collections/share/[slug]` serves a Server Component without auth  
   - Read-only gallery display with captions   
-- **Social Sharing Buttons**  
-  - One-click share to Twitter, Facebook, WhatsApp (future feature)  
-  - “Copy link” button with clipboard feedback  
-- **Embed Support**  
-  - Provide an `<iframe>` snippet so users can embed their collection in blogs  (future feature)
+- **Private view**  
+  - Albums can also be viewed by logged in users
 
+  [![Demo Video](https://upww.screenrec.com/images/f_il3h6b8E1WVGwFa0ozOvA7jIS4U5smPe.png)](https://screenrec.com/share/ZYzDNPyJQI)  
+*Click to play demo
 ---
 
 ### 📱 Responsive Design
@@ -193,8 +192,12 @@ Gallery App is a full-stack Next.js application for discovering, saving, organiz
   - View and edit display name, avatar  
   - View usage stats: number of favorites and collections
 - **Expiration & Permissions**  
-  - Optional expiration date on shared links (not completed)
-  - Protected shares with secret token (future feature) 
+  - Optional expiration date on shared links 
+  - Protected shares with secret token  
+- **Social Sharing Buttons**  
+  - One-click share to Twitter, Facebook, WhatsApp   
+  - “Copy link” button with clipboard feedback
+ 
     
 ---
 
@@ -210,12 +213,10 @@ Gallery App is a full-stack Next.js application for discovering, saving, organiz
    ```bash
    npm install
    ```
+<p><i>If any of the values don't work for any reason (e.g the google client Id) you can get the values from the secrete provider (e.g google cloud console for client id and client secrete). Ensure your also have a .env file (along with the .env.local file) with all the values below so that the command to generate the prisma client also works.</i></p>
 
 3. **Env Setup** (`.env.local`)  
-
-   Use the following values, if some of the values don't work for any reason (e.g the google client Id) you can get the values from go to the secrete provider (e.g google cloud 
-   console for client id and client secrete) to get the secrete. Ensure your also have a .env file.
-   ```ini
+   ```bash
    DATABASE_URL=postgresql://neondb_owner:npg_YcUxslGf21Ht@ep-round-paper-a5xq8tx5-pooler.us-east-2.aws.neon.tech/neondb?sslmode=require&connect_timeout=300
    NEXTAUTH_URL=http://localhost:3000
    NEXTAUTH_SECRET=040eb2d6f55afc4b868dcd8a01ac48693328a803fc191b04a0880aace65fc615
@@ -238,11 +239,6 @@ Gallery App is a full-stack Next.js application for discovering, saving, organiz
 
 ---
 
-## 📺 Demo
-
-![Demo GIF](assets/demo.gif)  
-[Watch video walkthrough](https://your-video-link)
-
 ## 📄 License
 
 This project is licensed under the [MIT License](LICENSE).
@@ -251,10 +247,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## 🤝 Connect With me
 
-- **Discord:** `@your-discord-handle`  
-- **X (Twitter):** `@your-twitter-handle`
+- **Discord:** `@chrisdev_74671`  
+- **X (Twitter):** `@ChrisDev879850`
 
----
 
-*Built on [LizethPatino/gallery-next](https://github.com/LizethPatino/gallery-next) starter.*  
-```
